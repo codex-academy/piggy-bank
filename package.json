@@ -1,0 +1,22 @@
+{
+  "name": "piggybank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
