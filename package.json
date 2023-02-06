@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "contracts" : "merge-dirs ./build/contracts ./web"
   },
   "keywords": [],
   "author": "",
