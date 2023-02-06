@@ -104,6 +104,15 @@ module.exports = {
       // from : '0x2D86B112DEd278Cd8dA8CA29E62099Ff58E7Cfb4'
     },
 
+    sepolia: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, 
+            'https://sepolia.infura.io/v3/' + process.env.INFURA_API_KEY)
+      },
+      network_id: 11155111, // eslint-disable-line camelcase
+      gas: 4465030,
+      // gasPrice: 10000000000
+    },
 
     //
     // Useful for private networks
@@ -133,6 +142,7 @@ module.exports = {
       // }
     }
   },
+  plugins: ['truffle-plugin-verify']
 
   // Truffle DB is currently disabled by default; to enable it, change enabled:
   // false to enabled: true. The default storage location can also be

@@ -34,12 +34,20 @@ let account = null;
 const accountElem = document.querySelector(".account");
 const balance = document.querySelector(".balance");
 
-web3.eth.getCoinbase(function(err, _account) {
-    if (err === null) {
-        account = _account;
+// web3.eth.getCoinbase(function(err, _account) {
+//     if (err === null) {
+//         account = _account;
+//         accountElem.innerText = account;
+//     }
+//   });
+
+  if(window.ethereum){
+    // alert("window.ethereum")
+    ethereum.enable().then(function(acc){
+        account = acc[0];
         accountElem.innerText = account;
-    }
-  });
+    });
+}
 
 let instance = null;
 
