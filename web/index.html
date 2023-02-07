@@ -8,19 +8,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.2/web3.min.js" integrity="sha512-Ls8WO4Esu7Jb9a92BfIp1Ftgl9t5Ncaa/6zKzpOkTGXW+dPcJcI4Yz2HR7cXY0YcfIAsL7R9Gqfbw8ERX8iYaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js" defer></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-    <div>
-        <h1>Piggy Bank</h1>
-        <div>
-            Account: <span class="account"></span>
-        </div>
-        <div>
-            Current balance: <span class="balance" >0</span>
-        </div>
-        <div>
-            <button onclick="clickDeposit()" >Deposit</button>
-        </div>
+    <div class="container" >
+        
+        <h1 class="title" ></h1>
+
+        <section class="hero is-info">
+            <div class="hero-body">
+              <p class="title">
+                Piggy Bank  <img src="piggy-bank.png" width="75" alt="" srcset="">
+              </p>
+              <p class="subtitle">
+                Learning Web3 & Ethereum basics
+              </p>
+            </div>
+          </section>
+          <section class="section">
+
+              <div class="box" >
+                  Account: <span class="account tag"></span>
+              </div>
+              <div class="box">
+                  Current balance: <span class="balance tag" >0</span>
+                  <div >
+                    <button class="button is-info" onclick="clickDeposit()" >
+                        <img class="mr-2" src="piggy-bank.png" width="25" alt="" srcset="">
+                        Deposit</button>
+                </div>
+              </div>
+              <!-- <div class="box">
+                  Coins earned:         
+                      <img src="money.png" width="35" alt="" srcset="">
+                      <img src="money.png" width="35" alt="" srcset="">
+                      <img src="money.png" width="35" alt="" srcset="">
+    
+              </div> -->
+              
+
+          </section>
+
+
+
+       
 
     </div>
 </body>
