@@ -1,4 +1,6 @@
-# The PiggyBank - Ethereum smart contract introduction
+# The PiggyBank
+
+> An Ethereum smart contract introduction.
 
 This dApp is deployed at [http://piggybank.projectcodex.net/](http://piggybank.projectcodex.net/) and is running on the Goerli & Sepolia Ethereum TestNets.
 
