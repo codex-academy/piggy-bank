@@ -53,7 +53,12 @@ async function updateFields() {
 
     balance.innerText = deposits.toString();
     userDepositsElem.innerText = userDeposits.toString();
-    userCoinsElem.innerText = userCoins.toString();
+    // userCoinsElem.innerText = userCoins.toString();
+
+    const userCoinCount = Number(userCoins.toString());
+    for (let i=0;i<userCoinCount;i++){
+        userCoinsElem.innerHTML += `<img src="money.png" width="35" alt="coin" class="m-1" >`;
+    }
 
 }
 
