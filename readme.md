@@ -2,6 +2,15 @@
 
 This dApp is deployed at [http://piggybank.projectcodex.net/](http://piggybank.projectcodex.net/) and is running on the Goerli & Sepolia Ethereum TestNets.
 
+
+The `PiggyBank` smartcontract accepts deposits from blockchain users. 
+
+It keeps track of:
+
+* how many deposists are made in total,
+* how many deposits each individual user made,
+* it allocates a coin to a user for each 5 deposits made.
+
 ## MetaMask setup
 
 To use the aApp install [MetaMask](https://metamask.io/) crypto wallet - you can download it [here](https://metamask.io/download/) for your browser of choice.
