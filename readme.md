@@ -15,7 +15,7 @@ It keeps track of:
 
 ## MetaMask setup
 
-To use the aApp install [MetaMask](https://metamask.io/) crypto wallet - you can download it [here](https://metamask.io/download/) for your browser of choice.
+To use the dApp install [MetaMask](https://metamask.io/) crypto wallet - you can download it [here](https://metamask.io/download/) for your browser of choice.
 
 Next connect to the goerli or sepolia testnets.
 
