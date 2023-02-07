@@ -1,6 +1,6 @@
 
 function w3Setup() {
-    let web3, web3Provider; 
+    let web3, web3Provider;
     if (Web3 && Web3.givenProvider) {
         // If a web3 instance is already provided by Meta Mask.
         web3Provider = Web3.givenProvider;
@@ -33,17 +33,12 @@ const { web3, web3Provider } = w3Setup();
 let account = null;
 const accountElem = document.querySelector(".account");
 const balance = document.querySelector(".balance");
+const userDepositsElem = document.querySelector(".userDeposits");
+const userCoinsElem = document.querySelector(".userCoins");
 
-// web3.eth.getCoinbase(function(err, _account) {
-//     if (err === null) {
-//         account = _account;
-//         accountElem.innerText = account;
-//     }
-//   });
-
-  if(window.ethereum){
+if (window.ethereum) {
     // alert("window.ethereum")
-    ethereum.enable().then(function(acc){
+    ethereum.enable().then(function (acc) {
         account = acc[0];
         accountElem.innerText = account;
     });
@@ -51,21 +46,31 @@ const balance = document.querySelector(".balance");
 
 let instance = null;
 
+async function updateFields() {
+    const deposits = await instance.numberOfDeposits();
+    const userDeposits = await instance.userDeposits(account);
+    const userCoins = await instance.userCoins(account);
+
+    balance.innerText = deposits.toString();
+    userDepositsElem.innerText = userDeposits.toString();
+    userCoinsElem.innerText = userCoins.toString();
+
+}
+
 async function start() {
     const contract = await setupContract(web3Provider);
     instance = await contract.deployed();
-    const deposits = await instance.numberOfDeposits();
-    balance.innerText = deposits.toString();
+
+    await updateFields()
 
     instance.Deposited().on('data', async () => {
-        const deposits = await instance.numberOfDeposits();
-        balance.innerText = deposits.toString();
-    })
+        await updateFields();
+    });
 
 }
 
 async function clickDeposit() {
-    await instance.deposit({ from : account  });
+    await instance.deposit({ from: account });
 }
 
 start();

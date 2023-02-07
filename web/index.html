@@ -31,7 +31,31 @@
                   Account: <span class="account tag"></span>
               </div>
               <div class="box">
-                  Current balance: <span class="balance tag" >0</span>
+
+                  <table class="table">
+                    <tr>
+                      <td>All deposits</td>
+                      <td><span class="balance tag" >0</span></td>
+                    </tr>
+                    <tr>
+                      <td>Your deposits</td>
+                      <td>
+                        <span class="userDeposits tag" >0</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Coins earned</td>
+                      <td>
+                        <span class="userCoins tag" >0</span>
+
+                        <!-- <img src="money.png" width="35" alt="" srcset="">
+                        <img src="money.png" width="35" alt="" srcset=""> -->
+                      </td>
+                    </tr>
+
+                  </table>
+
+                  Current balance: 
                   <div >
                     <button class="button is-info" onclick="clickDeposit()" >
                         <img class="mr-2" src="piggy-bank.png" width="25" alt="" srcset="">
